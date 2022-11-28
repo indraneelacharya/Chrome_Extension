@@ -1,0 +1,22 @@
+{
+    "name": "Dsylexic_Readers",
+    "description": "help dyslexic readers",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "popup.js"
+    },
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_title": "Dsylexic_Readers",
+      "default_popup": "popup.html"
+    },
+    "content_security_policy": {},
+    "host_permissions": [
+      "*://*/*"
+    ]
+  }

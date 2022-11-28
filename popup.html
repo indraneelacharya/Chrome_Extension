@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .popup {
+        min-width: 344px;
+        min-height: 188px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
+    h1{
+        font-family: 'Open Sans', sans-serif;
+    }
+    .yellow{
+        color: yellow;
+    }
+    .blue{
+        color: blue;
+    }
+    p,
+    .button{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.15rem;
+    }
+    .button{
+        background-color: lightblue;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 4.5rem;
+        border:1rem;
+        border-radius: 0.9rem;
+        /*animation: backgroundyellow 4s infinite;*/
+        cursor:pointer;
+    }
+    .row{
+        padding: 0 0.2rem;
+        pointer-events: none;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 1rem;
+        background-color: blue;
+        /*animation: move_circle_right 4s infinite;*/
+        pointer-events: none;
+    }
+    @keyframes move_circle_right{
+        from{
+            left:0;
+            background-color: blue;
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: gold;
+        }
+    }
+    @keyframes move_circle_left{
+        from{
+            left:100%;
+            transform: translateX(-100%);
+            background-color: gold;
+        }
+        to{
+            left: 0;        
+            background-color: blue;
+        }
+    }
+    @keyframes backgroundyellow{
+        from{
+            background-color: lightblue;
+        }
+        to{
+            background-color: lightyellow;
+        }
+    }
+    @keyframes backgroundblue{
+        from{
+            background-color: lightyellow;
+        }
+        to{
+            background-color: lightblue;
+        }
+    }
+</style>
+
+<body>
+    <div class ="popup">
+        <h1><span class  = "yellow">Dyslexic</span><span class = "blue">Readers</span></h1>
+        <p>"Use this if you're dyslexic"</p>
+    </div>
+    
+    <div class="button">
+        <div class="row">On</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
